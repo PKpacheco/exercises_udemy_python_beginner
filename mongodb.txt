@@ -1,0 +1,25 @@
+
+--mongod
+
+other
+-- mongo
+
+> show dbs
+
+> use fullstack
+
+> show collections
+>
+> db.students.insert({"name":"Maria", "mark":99})
+
+> db.students.find({})
+
+> db.students.insert({"item":"Chair", "price":999, "age":25})
+
+> db.students.find({})
+> 
+> db.students.remove({"item":"Chair"})
+
+> show dbs
+>
+> show collections
