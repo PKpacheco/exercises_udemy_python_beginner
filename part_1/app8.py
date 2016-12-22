@@ -9,6 +9,8 @@ database = client['fullstack']
 collection = database['students']
 
 students = collection.find({})
+student_list = []
 
 for student in students:
-    print (student)
+    student_list.append(student)
+    print (student_list)

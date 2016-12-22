@@ -1,0 +1,8 @@
+.DS_Store
+*.pyc
+include
+homesite/static/lib
+local
+share
+*.db
+*.sqlite3
