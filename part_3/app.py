@@ -1,10 +1,17 @@
-from models.post2 import Post
 from database import Database
+from post import Post
+
+import pymongo
+
+
+uri = "mongodb://127.0.0.1:27017"
+client = pymongo.MongoClient(uri)
 
 Database.initialize()
 
-post = Post("Post1 title", "Post1 content", "Post1 author")
-post2 = Post("Post2 title", "Post2 content", "Post2 author")
 
-print(post.content)
-print(post2.content)
+post = Post(blog_id="123",
+            title="Another great post",
+            content="This is some sample content",
+            author="Joseph")
+post.save_to_mongo()

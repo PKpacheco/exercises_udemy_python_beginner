@@ -1,5 +1,7 @@
 import uuid
 import datetime
+from database import Database
+
 __author__ = "pkpacheco"
 
 
@@ -20,10 +22,10 @@ class Post(object):
     def json(self):
         return {
             'id': self.id,
-            'blog_id': self.blog_id
-            'author': self.author
-            'content': self.content
-            'title': self.title
+            'blog_id': self.blog_id,
+            'author': self.author,
+            'content': self.content,
+            'title': self.title,
             'created_date': self.created_date
         }
 
