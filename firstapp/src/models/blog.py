@@ -11,14 +11,7 @@ class Blog(object):
         self.description = description
         self._id = _id
 
-    def new_post(self):
-        title = input("Enter post title:")
-        content = input("Enter post content:")
-        date = input("Enter post data or leave blank for today:(format DDMMYYYY)")
-        if date == "":
-            date = datetime.datetime.utcnow()
-        else:
-            datetime.datetime.strptime(date, "%d%m%Y")
+    def new_post(self, title, content, date=datetime.datetime.utcnow()):
         post = Post(blog_id=self._id,
                     title=title,
                     content=content,
